@@ -1,0 +1,11 @@
+Stack s = new Stack()
+while(!q.isEmpty())
+    s.push(q.dequeue())
+while(!s.isEmpty())
+    q.enqueue(s.pop())
+
+
+Ans: In this code firstly the queue gets emptied and the elements of queue gets pushed into stack
+    Secondly the stack elements gets emptied and enqueud into the queue here now in the queue we get
+    queue's previous elements in the reverse order and along with queue's elements we get newly added
+    stack's elements in the queue.
