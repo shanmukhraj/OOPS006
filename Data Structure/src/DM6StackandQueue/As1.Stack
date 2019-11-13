@@ -1,0 +1,209 @@
+Suppose that a client performs an intermixed sequence of (stack) push and pop operations.
+The push operations put the integers 0 through 9 in order onto the stack; the pop operations print out the return values.
+Which of the following sequence(s) could not occur?
+
+a) 4 3 2 1 0 9 8 7 6 5
+
+b) 4 6 8 7 5 3 2 9 0 1
+
+c) 2 5 6 7 4 8 9 3 1 0
+
+d) 4 3 2 1 0 5 6 7 8 9
+
+e) 1 2 3 4 5 6 9 8 7 0
+
+f) 0 4 6 5 3 8 1 7 2 9
+
+g) 1 4 7 9 8 6 5 3 0 2
+
+h) 2 1 4 3 6 5 8 7 9 0
+
+Answer: options b, g, f
+
+Reason:
+a)  push(0)
+    push(1)
+    push(2)
+    push(3)
+    push(4)
+    pop() // pops 4
+    pop() // pops 3
+    pop() // pops 2
+    pop() // pops 1
+    pop() // pops 0
+    push(5)
+    push(6)
+    push(7)
+    push(8)
+    push(9)
+    pop() // pops 9
+    pop() // pops 8
+    pop() // pops 7
+    pop() // pops 6
+    pop() // pops 5
+
+    Here we get the same sequence 4 3 2 1 0 9 8 7 6 5 as shown in the option.
+
+
+b)  push(0)
+    push(1)
+    push(2)
+    push(3)
+    push(4)
+    pop() // pops 4
+    push(5)
+    push(6)
+    pop() // pops 6
+    push(7)
+    push(8)
+    pop() //pops 8
+    pop() // pops 7
+    pop() //pops 5
+    pop() // pops 3
+    pop() // pops 2
+    push(9)
+    pop() //pops 9
+    pop() // pops 1
+    pop() // pops 0
+
+    Here we don't get the same sequence as 4 6 8 7 5 3 2 9 1 0
+
+c)
+    push(0)
+    push(1)
+    push(2)
+    pop() //pops 2
+    push(3)
+    push(4)
+    push(5)
+    pop() //pops 5
+    push(6)
+    pop() //pops 6
+    push(7)
+    pop() //pops 7
+    pop() //pops 4
+    push(8)
+    pop() //pops 8
+    push(9)
+    pop() //pops 9
+    pop() //pops 3
+    pop() //pops 1
+    pop() //pops 0
+
+    Here the sequence is same as  in the option.
+
+d)
+    push(0)
+    push(1)
+    push(2)
+    push(3)
+    push(4)
+    pop() //pops 4
+    pop() //pops 3
+    pop() //pops 2
+    pop() //pops 1
+    pop() //pops 0
+    push(5)
+    pop() //pops 5
+    push(6)
+    pop() //pops 6
+    push(7)
+    pop() //pops 7
+    push(8)
+    pop() //pops 8
+    push(9)
+    pop() //pops 9
+
+    Here we have the same sequence as in the option
+
+e)  push(0)
+    push(1)
+    pop() // pops 1
+    push(2)
+    pop() // pops 2
+    push(3)
+    pop() // pops 3
+    push(4)
+    pop() // pops 4
+    push(5)
+    pop() // pops 5
+    push(6)
+    pop() // pops 6
+    push(7)
+    push(8)
+    push(9)
+    pop() // pops 9
+    pop() // pops 8
+    pop() // pops 7
+    pop() // pops 0
+
+    Here we have the same sequence as shown in the option.
+
+f)  push(0)
+    pop() //pops 0
+    push(1)
+    push(2)
+    push(3)
+    push(4)
+    pop() // pops 4
+    push(5)
+    push(6)
+    pop() // pops 6
+    pop() // pops 5
+    pop() // pops 3
+    push(7)
+    push(8)
+    pop()  // pops 8
+    pop() // pops 7
+    pop() // pops 2
+    pop() // pops 1
+    push(9)
+    pop() // pops 9
+
+    Here the sequence is not same as shown in the option it should be 0 4 6 5 3 8 7 2 1 9
+
+g)  push(0)
+    push(1)
+    pop() //pops 1
+    push(2)
+    push(3)
+    push(4)
+    pop() //pops 4
+    push(5)
+    push(6)
+    push(7)
+    pop() // pops 7
+    push(8)
+    push(9)
+    pop() // pops 9
+    pop() // pops 8
+    pop() // pops 6
+    pop() // pops 5
+    pop() // pops 3
+    pop() // pops 2
+    pop() // pops 0
+
+    Here the sequence is not same as shown in option it should be 1 4 7 9 8 6 5 3 2 0
+
+h)  push(0)
+    push(1)
+    push(2)
+    pop() //pops 2
+    pop() //pops 1
+    push(3)
+    push(4)
+    pop() // pops 4
+    pop() // pops 3
+    push(5)
+    push(6)
+    pop() // pops 6
+    pop() // pops 5
+    push(7)
+    push(8)
+    pop() // pops 8
+    pop() // pops 7
+    push(9)
+    pop() // pops 9
+    pop() // pops 0
+
+    Here the sequence is same as shown in the option.
