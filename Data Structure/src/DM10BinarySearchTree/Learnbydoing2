@@ -1,0 +1,16 @@
+Give the sequences of nodes examined when the methods in BST are used to compute each of the following quantities for the tree drawn at below.
+a. floor("Q")
+b. select(5)
+c. ceiling("Q")
+d. rank("J")
+e. size("D", "T")
+f. keys("D", "T")
+
+
+Solution
+a. Q
+b. Q
+c. Q
+d. 4
+e. 6
+f. D E J M Q T
