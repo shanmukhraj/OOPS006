@@ -1,0 +1,9 @@
+Is the following implementation of hashCode() is legal?
+
+public int hashCode(){
+    return 17;
+}
+If legal analyze the performance.
+
+Yes the implementation is legal but it is a poor hash function. The reason it is poor hash function is because there will be lot
+of memory wastage and there will be more collisions as every key we insert will be at '17th' index.
